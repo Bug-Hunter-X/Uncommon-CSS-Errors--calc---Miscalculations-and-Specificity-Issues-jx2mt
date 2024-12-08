@@ -1,0 +1,31 @@
+/* bugSolution.css */
+
+/* Correcting calc() errors: Ensure spaces between operators and operands */
+.box {
+  width: calc(100px - 50px); /* Correct: Added spaces */
+  height: calc(200px + 50%); /* Correct: Added spaces */
+}
+
+/* Addressing specificity issues: Use more specific selectors or adjust the order strategically */
+.container {
+  /* styles */
+}
+
+.container .item { /* More specific selector takes precedence */
+  /* styles */
+}
+
+/*Alternatively, change declaration order if the specificity is equal (avoiding the issue altogether) */
+.item-class-2{
+/* styles */
+}
+
+.item-class-1{
+/* styles */
+}
+
+/* Or use !important (less recommended unless absolutely necessary) */
+.item-class-3 {
+  /* styles */
+  /* Less desirable as !important may cause maintenance issues later*/
+}
